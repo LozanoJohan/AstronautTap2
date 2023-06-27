@@ -29,7 +29,7 @@ All rights reserved.
 ## About
 
 Reach me:  
-https://www.linkedin.com/in/johan-david-lozano-leiva-4b871a25a/
+https://www.linkedin.com/in/johan-david-lozano-leiva-4b871a25a/  
 lozanojoha321@gmail.com
 
 
