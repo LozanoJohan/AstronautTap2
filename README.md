@@ -3,13 +3,13 @@
 A quite better version of AstronautTap.   
   
 Fly as high as you can through space while collecting stars!
-[Go play it]([https://github.com/LozanoJohan/AstronautTap2/assets/108693709/6b4d81b8-18dc-48c0-934f-043e39e16c98](https://play.google.com/store/apps/details?id=com.JLozanoL.AstronautTap&pli=1))
+[Go play it](https://play.google.com/store/apps/details?id=com.JLozanoL.AstronautTap&pli=1)
 
 ## Table of Contents
 - [Play](#play)  
 - [Screenshots](#screenshots)
-- [Features](#features)
-- [Installation](#installation)
+- [License](#license)
+- [About](#about)
 
 ## Play
 
@@ -22,7 +22,6 @@ https://play.google.com/store/apps/details?id=com.JLozanoL.AstronautTap&pli=1
 <img src="https://github.com/LozanoJohan/AstronautTap2/assets/108693709/fc15fb89-f927-4bdb-b3ae-4cbcac1b5b22" width="200">
 
 ## License
-
 
 All rights reserved.
 
