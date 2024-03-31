@@ -11,6 +11,7 @@ TagManager:
   - PowerUp
   - Meteoro
   - Planeta
+  - Asteroide
   layers:
   - Default
   - TransparentFX

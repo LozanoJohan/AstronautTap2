@@ -249,8 +249,8 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/JohanDavid/user.keystore
-  AndroidKeyaliasName: jl
+  AndroidKeystoreName: D:/Users/Usuario/Desktop/user.keystore
+  AndroidKeyaliasName: johan
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1

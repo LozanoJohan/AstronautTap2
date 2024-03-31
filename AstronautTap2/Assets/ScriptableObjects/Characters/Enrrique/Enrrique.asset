@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5006bbbee1d00d342a81855e016692b0, type: 3}
+  m_Name: Enrrique
+  m_EditorClassIdentifier: 
+  id: 0
+  characterName: Enrrique
+  power: Probability to double coins
+  actualSkin: {fileID: 0}
+  isUnlocked: 0
+  defaultPowerValue: 7
+  skins:
+  - {fileID: 11400000, guid: 4d021dd3514f62d49bc8d2f405d40d3e, type: 2}
+  - {fileID: 11400000, guid: ba174e01aa5afde4b8196bfbe4f62acf, type: 2}
