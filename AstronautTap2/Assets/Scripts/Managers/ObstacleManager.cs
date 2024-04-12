@@ -4,14 +4,10 @@ using UnityEngine;
 public class ObstacleManager : MonoBehaviour
 {
     public SpriteRenderer panel;
-    [SerializeField] GameObject[] posibleObstacles;
+    [SerializeField] ObstacleGroupSO[] posibleObstacles;
     private int spawnInicial = 0;
     public bool testMode;
-    public bool isFlippable;
-    private bool isFlipped;
-    private GameObject objSpawneado;
     public GameObject meteorito;
-    private GameObject objAspawnear;
     private Transform playerTrs;
     void Start()
     {
@@ -31,16 +27,26 @@ public class ObstacleManager : MonoBehaviour
     }
     public void SpawnObstacles(float y)
     {
-        isFlipped = Mathf.Round(Random.Range(0f, 1f)) == 1f;
-        int indice = Mathf.RoundToInt(Random.Range(0f, posibleObstacles.Length - 1));
+        bool flip = Mathf.Round(Random.Range(0f, 1f)) == 1f;
+        int i = Mathf.RoundToInt(Random.Range(0f, posibleObstacles.Length - 1));
 
-        objAspawnear = posibleObstacles[indice];
-        objSpawneado = Instantiate(objAspawnear, new Vector3(0, y + 15, 0), Quaternion.identity);
+        ObstacleGroupSO obstacleGroup = posibleObstacles[i];
+        GameObject obstacles = obstacleGroup.obstacles;
+        GameObject spawnedGameObject = Instantiate(obstacles, new Vector3(0, y + obstacleGroup.height, 0), Quaternion.identity);
 
-        if (isFlipped && isFlippable && indice != 6) objSpawneado.transform.localScale = new Vector3(
-                    -objSpawneado.transform.localScale.x, objSpawneado.transform.localScale.y, 0);
+        if (flip && obstacleGroup.isFlippable)
+        {
+            FlipHorizontally(spawnedGameObject);
+        }
 
         spawnInicial += 20;
+    }
+
+    private void FlipHorizontally(GameObject obstacle)
+    {
+        Vector3 scale = obstacle.transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
     }
     public IEnumerator SpawnMeteoros()
     {

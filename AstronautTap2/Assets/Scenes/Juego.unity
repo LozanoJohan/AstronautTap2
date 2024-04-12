@@ -19238,7 +19238,6 @@ MonoBehaviour:
   - {fileID: 3425144437948128910, guid: 33af2e83f9118a240b9cb8599bf50a3e, type: 3}
   - {fileID: 1515303778556907326, guid: 08107587227c646449fb714d6ab5e71f, type: 3}
   testMode: 0
-  isFlippable: 0
   meteorito: {fileID: 6664941285840811884, guid: 0f55f09e741c51347bdf8be6db8ef838, type: 3}
 --- !u!1 &1266067282
 GameObject:
