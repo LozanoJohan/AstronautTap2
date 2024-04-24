@@ -19223,20 +19223,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panel: {fileID: 161166197}
   posibleObstacles:
-  - {fileID: 2880418915915963855, guid: aa73ec7ce9e11f14582607bf95242d83, type: 3}
-  - {fileID: 6951531334255655246, guid: acd4b9fa10920ac47a55a50a83d83f7d, type: 3}
-  - {fileID: 2749365978320533256, guid: 059edd2cd2df4f740b48069d0260fb4e, type: 3}
-  - {fileID: 8361001082830643023, guid: d66d30e89912d354496cac36a47d7c6b, type: 3}
-  - {fileID: 7143031503754217387, guid: 2a878fdb807d8bf4cbe1bdb6a28453bc, type: 3}
-  - {fileID: 241026704459371556, guid: d3d6083bc2f6f5a43854ca50b48ff627, type: 3}
-  - {fileID: 6088898030673735000, guid: b6188de90f6f59f4182f9ed5f289ebb8, type: 3}
-  - {fileID: 6913845888017341295, guid: 495d49022811d9d4b9d4bcc9e1abed99, type: 3}
-  - {fileID: 6913845888017341295, guid: 495d49022811d9d4b9d4bcc9e1abed99, type: 3}
-  - {fileID: 3310154972698081639, guid: 17193e30879f36e468d977af5a6f9a67, type: 3}
-  - {fileID: 7707402348689928197, guid: 4764bfc352a55fd448b66bf8cd96042c, type: 3}
-  - {fileID: 500301172878807541, guid: 97116271d52260f47a51437a557ba328, type: 3}
-  - {fileID: 3425144437948128910, guid: 33af2e83f9118a240b9cb8599bf50a3e, type: 3}
-  - {fileID: 1515303778556907326, guid: 08107587227c646449fb714d6ab5e71f, type: 3}
+  - {fileID: 11400000, guid: 2ca1f4ded1671ac498d039302e4312d6, type: 2}
+  - {fileID: 11400000, guid: ce21f6d746f413f46ac9506d7a93d63d, type: 2}
+  - {fileID: 11400000, guid: e2768fc28b4fac24f82b1b32ecf6f105, type: 2}
+  - {fileID: 11400000, guid: ccc31ff2a678302429eb023352ecee6b, type: 2}
   testMode: 0
   meteorito: {fileID: 6664941285840811884, guid: 0f55f09e741c51347bdf8be6db8ef838, type: 3}
 --- !u!1 &1266067282

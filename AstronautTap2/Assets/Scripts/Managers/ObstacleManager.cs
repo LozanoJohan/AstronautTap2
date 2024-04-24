@@ -1,5 +1,8 @@
+using static ObstacleGroupSO;
 using System.Collections;
+using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class ObstacleManager : MonoBehaviour
 {
@@ -9,6 +12,7 @@ public class ObstacleManager : MonoBehaviour
     public bool testMode;
     public GameObject meteorito;
     private Transform playerTrs;
+    public float difficultyRange = 60;
     void Start()
     {
         playerTrs = Player.I.gameObject.transform;
@@ -27,12 +31,18 @@ public class ObstacleManager : MonoBehaviour
     }
     public void SpawnObstacles(float y)
     {
-        bool flip = Mathf.Round(Random.Range(0f, 1f)) == 1f;
-        int i = Mathf.RoundToInt(Random.Range(0f, posibleObstacles.Length - 1));
+        Difficulty difficulty = GetDifficultyLevel(y);
+        ObstacleGroupSO[] filteredObtacles = FilterObstaclesByDifficulty(difficulty);
 
-        ObstacleGroupSO obstacleGroup = posibleObstacles[i];
+        bool flip = Mathf.Round(Random.Range(0f, 1f)) == 1f;
+        int i = Mathf.RoundToInt(Random.Range(0f, filteredObtacles.Length - 1));
+
+        ObstacleGroupSO obstacleGroup = filteredObtacles[i];
         GameObject obstacles = obstacleGroup.obstacles;
-        GameObject spawnedGameObject = Instantiate(obstacles, new Vector3(0, y + obstacleGroup.height, 0), Quaternion.identity);
+        
+        GameObject spawnedGameObject = Instantiate(obstacles, 
+                                            new Vector3(0, y + obstacleGroup.height, 0), 
+                                            Quaternion.identity);
 
         if (flip && obstacleGroup.isFlippable)
         {
@@ -42,6 +52,19 @@ public class ObstacleManager : MonoBehaviour
         spawnInicial += 20;
     }
 
+    private Difficulty GetDifficultyLevel(float y)
+    {
+        int difficulty = Mathf.Clamp(Mathf.RoundToInt(y / difficultyRange),
+                            min: (int)Difficulty.Easy,
+                            max: (int)Difficulty.Hard);
+
+        return (Difficulty) difficulty;
+    }
+
+    private ObstacleGroupSO[] FilterObstaclesByDifficulty(Difficulty difficulty)
+    {
+        return posibleObstacles.Where(obstacle => obstacle.difficulty == difficulty).ToArray();
+    }
     private void FlipHorizontally(GameObject obstacle)
     {
         Vector3 scale = obstacle.transform.localScale;
