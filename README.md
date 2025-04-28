@@ -1,7 +1,9 @@
 # AstronautTap2
 
 A quite better version of AstronautTap.   
-  
+
+go to AstronautTap2/Assets/Scripts for the code
+
 Fly as high as you can through space while collecting stars!
 [Go play it](https://play.google.com/store/apps/details?id=com.JLozanoL.AstronautTap&pli=1)
 
